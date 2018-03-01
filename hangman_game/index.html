@@ -1,0 +1,69 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Web Template</title>
+<link href="css/reset.css" rel="stylesheet" type="text/css">
+<link href="css/main.css" rel="stylesheet" type="text/css">
+</head>
+
+<body>
+	<section id="container">
+		<section id="reset_screen">
+			<h3>losing screen</h3>
+			<button id=reset_button>Restart</button>
+		</section>
+
+	<!--below is for the hanging stucture-->
+	<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 77.5 133" id="hangman">
+	 <defs>
+		 <style>
+			 .cls-1 {
+				 fill: none;
+				 stroke: #000;
+				 stroke-miterlimit: 10;
+			 }
+
+			 .cls-2 {
+				 fill: none;
+			 }
+		 </style>
+	 </defs>
+	 <title>hangman</title>
+	 <g id="leg_2" class="wrong5">
+		 <line class="cls-1" x1="35.78" y1="85.76" x2="17.88" y2="107.5"/>
+	 </g>
+	 <g id="leg_1" class="wrong4">
+		 <line class="cls-1" x1="35.78" y1="85.76" x2="53.69" y2="107.5"/>
+	 </g>
+	 <g id="arm_2" class="wrong3">
+		 <line class="cls-1" x1="35.78" y1="57.62" x2="62" y2="48.67"/>
+	 </g>
+	 <g id="arm_1" class="wrong2">
+		 <line class="cls-1" x1="35.78" y1="57.62" x2="9.57" y2="48.67"/>
+	 </g>
+	 <g id="body" class="wrong1">
+		 <line class="cls-1" x1="35.78" y1="48.67" x2="35.78" y2="85.76"/>
+	 </g>
+	 <g id="head" class="wrong0">
+		 <g>
+			 <path class="cls-2" d="M50,63.63A13.06,13.06,0,1,1,63,50.56,13.08,13.08,0,0,1,50,63.63Z" transform="translate(-14.5 -15)"/>
+			 <path d="M50,38A12.56,12.56,0,1,1,37.4,50.56,12.58,12.58,0,0,1,50,38m0-1A13.56,13.56,0,1,0,63.53,50.56,13.56,13.56,0,0,0,50,37Z" transform="translate(-14.5 -15)"/>
+		 </g>
+	 </g>
+	 <g id="Stand">
+		 <polyline class="cls-1" points="35 22.5 35 0.5 77 0.5 77 132.5 0 132.5"/>
+	 </g>
+ </svg>
+		</section>
+
+	<p id="hint_box"></p>
+	<button type="button" name="button" id="start_button">init</button>
+	<input type="text" id="guess_box">
+
+
+
+
+	<script src="js/main.js"></script>
+</body>
+</html>
