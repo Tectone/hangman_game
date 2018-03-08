@@ -1,69 +1,66 @@
-<!doctype html>
-<html>
+<!DOCTYPE html>
+<html lang="en">
 <head>
-<meta charset="UTF-8">
-<title>Web Template</title>
-<link href="css/reset.css" rel="stylesheet" type="text/css">
-<link href="css/main.css" rel="stylesheet" type="text/css">
+  <meta charset="UTF-8">
+  <link rel="stylesheet" href="css/main.css">
+  <title>It's Hangman!</title>
 </head>
-
 <body>
-	<section id="container">
-		<section id="reset_screen">
-			<h3>losing screen</h3>
-			<button id=reset_button>Restart</button>
-		</section>
+  <main>
+    <section class="container">
+    <section class="hangman">
+      <h1 class="gameTitle">Hangman!</h1>
+      <h2>Guess the Word to Win!</h2>
+     <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+	 viewBox="0 0 483.7 441.8" style="enable-background:new 0 0 483.7 441.8;" xml:space="preserve">
+<style type="text/css">
+	.st0{fill:none;stroke:#000000;stroke-width:6;stroke-miterlimit:10;}
+	.st1{fill:none;stroke:#000000;stroke-width:11;stroke-miterlimit:10;}
+</style>
+<title>hangman</title>
+<g id="post">
+	<g id="man">
+		<g id="right_leg">
+			<line class="cls-1 wrong5" x1="221.2" y1="367" x2="166.2" y2="259.5"/>
+		</g>
+		<g id="left_leg">
+			<line class="cls-1 wrong4" x1="106.2" y1="367" x2="161.2" y2="259.5"/>
+		</g>
+		<g id="right_arm">
+			<line class="cls-1 wrong3" x1="163.2" y1="184.5" x2="258" y2="252"/>
+		</g>
+		<g id="left_arm">
+			<line class="cls-1 wrong2" x1="163.2" y1="184.5" x2="80" y2="252"/>
+		</g>
+		<g id="body">
+			<line class="cls-1 wrong1" x1="163.2" y1="175" x2="163.2" y2="261.5"/>
+		</g>
+		<circle id="head" class="cls-1 wrong0" cx="163.2" cy="124.9" r="50.1"/>
+	</g>
+</g>
+<polyline id="Base" class="st1" points="62.5,25 161.2,25 367,25 367,425 423,425 62.5,425 "/>
+<line class="st1" x1="161.2" y1="79" x2="161.2" y2="25"/>
+</svg>
+    </section>
 
-	<!--below is for the hanging stucture-->
-	<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 77.5 133" id="hangman">
-	 <defs>
-		 <style>
-			 .cls-1 {
-				 fill: none;
-				 stroke: #000;
-				 stroke-miterlimit: 10;
-			 }
+    <section class="wordSelect">
+      <p class="currentWord">
+      </p>
+      <label class="press_label">Choose a Letter!</label>
+      <input class="selectedLetter" maxlength="1" type="text" pattern=[a-zA-Z]>
+      <section class="wrong_area"
+        <i class="wrong_letter_label">used letters</i>
+        <p class="wrong_letters"></p>
+      </section>
+  </section>
+</section>
+<section class="reset_screen">
+  <h3 class="overText">GAME OVER!</h3>
+  <button>Play Again</button>
+</section>
+  </main>
 
-			 .cls-2 {
-				 fill: none;
-			 }
-		 </style>
-	 </defs>
-	 <title>hangman</title>
-	 <g id="leg_2" class="wrong5">
-		 <line class="cls-1" x1="35.78" y1="85.76" x2="17.88" y2="107.5"/>
-	 </g>
-	 <g id="leg_1" class="wrong4">
-		 <line class="cls-1" x1="35.78" y1="85.76" x2="53.69" y2="107.5"/>
-	 </g>
-	 <g id="arm_2" class="wrong3">
-		 <line class="cls-1" x1="35.78" y1="57.62" x2="62" y2="48.67"/>
-	 </g>
-	 <g id="arm_1" class="wrong2">
-		 <line class="cls-1" x1="35.78" y1="57.62" x2="9.57" y2="48.67"/>
-	 </g>
-	 <g id="body" class="wrong1">
-		 <line class="cls-1" x1="35.78" y1="48.67" x2="35.78" y2="85.76"/>
-	 </g>
-	 <g id="head" class="wrong0">
-		 <g>
-			 <path class="cls-2" d="M50,63.63A13.06,13.06,0,1,1,63,50.56,13.08,13.08,0,0,1,50,63.63Z" transform="translate(-14.5 -15)"/>
-			 <path d="M50,38A12.56,12.56,0,1,1,37.4,50.56,12.58,12.58,0,0,1,50,38m0-1A13.56,13.56,0,1,0,63.53,50.56,13.56,13.56,0,0,0,50,37Z" transform="translate(-14.5 -15)"/>
-		 </g>
-	 </g>
-	 <g id="Stand">
-		 <polyline class="cls-1" points="35 22.5 35 0.5 77 0.5 77 132.5 0 132.5"/>
-	 </g>
- </svg>
-		</section>
-
-	<p id="hint_box"></p>
-	<button type="button" name="button" id="start_button">init</button>
-	<input type="text" id="guess_box">
-
-
-
-
-	<script src="js/main.js"></script>
+  <script src="js/main.js"></script>
 </body>
 </html>
+
