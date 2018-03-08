@@ -1,6 +1,6 @@
 (() => {
   //put variables at top of js files everytime
-var words = ["banana", "frog", "cracker", "monkey", "chicken", "bucket", "steak", "cup"];
+var words = ["fruit", "frog", "cracker", "monkey", "bread", "bucket", "steak", "cup"];
 
 let currentWord = words[Math.floor(Math.random()*words.length)],
     wordHint = document.querySelector('.currentWord'),
@@ -59,14 +59,12 @@ function makeGuess() {
   matchAgainst.forEach((letter, index) => {
     if (letter === currentGuess) {
       hintString[index] = currentGuess;
-      correctGuesses++
-    }
-    if (hintString.includes(currentGuess) === true) {
-      currentGuess--
+      correctGuesses++;
     }
 
   });
-  wordHint.textContent = "";
+
+  wordHint.textContent = "";//makes the hint screen emtpy
   wordHint.textContent = hintString.join(" ");
 
   if (correctGuesses === currentWord.length) {
